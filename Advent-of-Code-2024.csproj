@@ -20,4 +20,17 @@
     <None Remove="Utils\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="Days\Days.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Inputs\Day1\InputB.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Inputs\Day1\InputA.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

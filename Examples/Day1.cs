@@ -1,6 +1,7 @@
 using Days;
 using static Microsoft.ApplicationInsights.MetricDimensionNames.TelemetryContext;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace Examples
 {
@@ -12,7 +13,9 @@ namespace Examples
         [TestMethod]
         public void ExampleA()
         {
-            int answerA = day.AnswerA();
+            string pathInput = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Inputs", $"Day1", $"ExampleA.txt");
+
+            int answerA = day.AnswerA(pathInput);
             int expectedAnswerA = 11;
 
             Assert.AreEqual(expectedAnswerA, answerA);
@@ -21,10 +24,12 @@ namespace Examples
         [TestMethod]
         public void ExampleB()
         {
-            int answerA = day.AnswerB();
-            int expectedAnswerB;
+            string pathInput = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Inputs", $"Day1", $"ExampleA.txt");
 
-            Assert.AreEqual(expectedAnswerB, answerA);
+            int answerB = day.AnswerB(pathInput);
+            int expectedAnswerB = 0;
+
+            Assert.AreEqual(expectedAnswerB, answerB);
 
         }
     }
