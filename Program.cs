@@ -11,8 +11,8 @@ internal class Program
         int inputDay = Convert.ToInt32(Console.ReadLine());
         IDay day = getDay(inputDay);
 
-        Console.WriteLine("Do you want to run 'A' or 'B'?");
-        char inputPart = Console.ReadKey().KeyChar;
+        Console.WriteLine("\n Do you want to run 'A' or 'B'?");
+        char inputPart = char.ToUpper(Console.ReadKey().KeyChar);
 
         int result;
         string pathInput = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Inputs", $"Day{inputDay}", $"Input{inputPart}.txt");
@@ -30,7 +30,7 @@ internal class Program
             throw new ArgumentException($"{inputPart} is an invalid input.");
         }
 
-        Console.WriteLine($"Result of day {day} is: {result}.");
+        Console.WriteLine($"\n\n Result of day {day} is: {result}.");
 
 
     }

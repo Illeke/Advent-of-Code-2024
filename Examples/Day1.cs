@@ -27,7 +27,7 @@ namespace Examples
             string pathInput = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Inputs", $"Day1", $"ExampleA.txt");
 
             int answerB = day.AnswerB(pathInput);
-            int expectedAnswerB = 0;
+            int expectedAnswerB = 31;
 
             Assert.AreEqual(expectedAnswerB, answerB);
 
