@@ -11,7 +11,7 @@ internal class Program
         int inputDay = Convert.ToInt32(Console.ReadLine());
         IDay day = getDay(inputDay);
 
-        Console.WriteLine("\n Do you want to run 'A' or 'B'?");
+        Console.WriteLine("\nDo you want to run 'A' or 'B'?");
         char inputPart = char.ToUpper(Console.ReadKey().KeyChar);
 
         int result;
@@ -30,7 +30,7 @@ internal class Program
             throw new ArgumentException($"{inputPart} is an invalid input.");
         }
 
-        Console.WriteLine($"\n\n Result of day {day} is: {result}.");
+        Console.WriteLine($"\n\nResult of day {day} is: \n{result}.");
 
 
     }
@@ -40,6 +40,8 @@ internal class Program
         {
             case 1:
                 return new Day1();
+            case 2:
+                return new Day2();
             default:
                 throw new ArgumentException($"{day} is an invalid value for day.");
         }
