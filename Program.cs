@@ -30,7 +30,7 @@ internal class Program
             throw new ArgumentException($"{inputPart} is an invalid input.");
         }
 
-        Console.WriteLine($"\n\nResult of day {day} is: \n{result}.");
+        Console.WriteLine($"\n\nResult of day {day} is: \n{result}");
 
 
     }
@@ -42,6 +42,8 @@ internal class Program
                 return new Day1();
             case 2:
                 return new Day2();
+            case 3:
+                return new Day3();
             default:
                 throw new ArgumentException($"{day} is an invalid value for day.");
         }
